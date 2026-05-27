@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="M/s Baltej Infra LLP - Premier Turnkey Contracting & Highway Construction" />
+  <title>M/s Baltej Infra LLP | Engineering & Contracting</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body data-theme="standard">
+
+  <!-- Accessibility Hub -->
+  <aside id="a11y-hub" class="a11y-panel" aria-label="Accessibility Controls">
+    <button id="a11y-toggle" class="a11y-btn" aria-expanded="false" aria-controls="a11y-menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+      <span class="sr-only">Accessibility</span>
+    </button>
+    <div id="a11y-menu" class="a11y-content">
+      <h3>Accessibility Hub</h3>
+      <div class="a11y-control">
+        <span>Font Size</span>
+        <button id="btn-font-dec" aria-label="Decrease Font Size">A-</button>
+        <button id="btn-font-inc" aria-label="Increase Font Size">A+</button>
+      </div>
+      <div class="a11y-control">
+        <label for="toggle-contrast">High Contrast</label>
+        <input type="checkbox" id="toggle-contrast" />
+      </div>
+      <div class="a11y-control">
+        <label for="toggle-motion">Reduce Motion</label>
+        <input type="checkbox" id="toggle-motion" />
+      </div>
+    </div>
+  </aside>
+
+  <!-- Mega-Navbar -->
+  <header class="main-header" id="navbar">
+    <div class="container nav-container">
+      <div class="brand">
+        <div class="custom-logo">
+          <div class="logo-banner">B A L T E J</div>
+          <div class="logo-banner">I N F R A</div>
+          <div class="logo-banner logo-small">L L P</div>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#portfolio">Our Portfolio</a>
+        <a href="technical_dossier.pdf" download>Technical Dossier</a>
+        <a href="#contact" class="btn-primary">Contact Us</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content fade-in">
+      <h1>Excellence in Infrastructure & General Contracting</h1>
+      <p>M/s Baltej Infra LLP specializes in comprehensive turnkey solutions, civil engineering, and premier general contracting across diverse sectors in India.</p>
+      <div class="hero-actions">
+        <a href="#portfolio" class="btn-primary">Explore Projects</a>
+        <a href="technical_dossier.pdf" class="btn-secondary" download>Download Dossier</a>
+        <a href="#contact" class="btn-secondary">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
+  </section>
+
+  <!-- Stats Counter -->
+  <section class="stats-section">
+    <div class="container stats-grid">
+      <div class="stat-card">
+        <div class="stat-number" data-target="27">0</div>
+        <div class="stat-label">Major Projects Delivered</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" data-target="5">0</div>
+        <div class="stat-label">States Operating In</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" data-target="1500">0</div>
+        <div class="stat-label">MW Power Plant Infra Built</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" data-target="100">0</div>
+        <div class="stat-label">% Commitment to Quality</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section section-pad">
+    <div class="container about-layout">
+      <div class="about-text slide-up">
+        <h2 class="section-title">Engineering Excellence</h2>
+        <p>At M/s Baltej Infra LLP, we execute with precision. Based in Jaipur, Rajasthan, we have built a reputation for excellence in highway construction, hydro-power civil works, and complex structural engineering projects.</p>
+        <p>We partner with premier national organizations including NHAI, SJVN, and NHLML to build the infrastructure that drives India forward.</p>
+        
+        <div class="verticals-grid">
+          <div class="vertical-card">
+            <h3>Turnkey Contracts</h3>
+            <p>End-to-end execution from design to delivery.</p>
+          </div>
+          <div class="vertical-card">
+            <h3>Highway Construction</h3>
+            <p>Specialized in mountain terrain and emergent restorations.</p>
+          </div>
+          <div class="vertical-card">
+            <h3>In-House Engineering</h3>
+            <p>Geotechnical and structural design expertise.</p>
+          </div>
+          <div class="vertical-card">
+            <h3>General Contracting</h3>
+            <p>Building and industrial infrastructure works.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio-section section-pad bg-light">
+    <div class="container">
+      <div class="section-header center">
+        <h2 class="section-title">Our Portfolio</h2>
+        <p>A proven track record of infrastructure delivery across multiple sectors.</p>
+      </div>
+      
+      <!-- Filter Buttons -->
+      <div class="filter-controls" id="portfolio-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="NHAI">NHAI Highways</button>
+        <button class="filter-btn" data-filter="SJVN">SJVN Energy</button>
+        <button class="filter-btn" data-filter="Building Works">Building Works</button>
+        <button class="filter-btn" data-filter="Logistics">Logistics</button>
+      </div>
+
+      <!-- Projects Grid (Populated by JS) -->
+      <div class="projects-grid" id="projects-container">
+        <!-- Loader -->
+        <div class="loader">Loading projects...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section section-pad bg-light">
+    <div class="container contact-premium-wrapper stagger-container">
+      <div class="contact-premium-info stagger-item">
+        <h2 class="section-title text-white">Get In Touch</h2>
+        <p class="contact-subtitle">Ready to collaborate on your next infrastructure project? Reach out to our headquarters.</p>
+        
+        <div class="contact-premium-cards">
+          <div class="premium-card stagger-item">
+            <div class="premium-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            </div>
+            <div>
+              <h4>Registered Office</h4>
+              <p>16, Shivraj Niketan, Gautam Marg<br/>Vaishali Nagar, Jaipur<br/>Rajasthan — 302021</p>
+            </div>
+          </div>
+          
+          <div class="premium-card stagger-item">
+            <div class="premium-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            </div>
+            <div>
+              <h4>Panchkula Office</h4>
+              <p>SCO 297, Second Floor,<br/>Above Union Bank of India,<br/>Sector-20, Panchkula — 134117</p>
+            </div>
+          </div>
+          
+          <div class="premium-card stagger-item">
+            <div class="premium-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+            </div>
+            <div>
+              <h4>Direct Contact</h4>
+              <p>+91 96020 12220<br/>+91 98169 61415</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-premium-form-container stagger-item">
+        <form class="contact-form premium-form" id="inquiry-form">
+          <h3 class="form-title">Send us a message</h3>
+          <div class="form-group">
+            <input type="text" id="name" placeholder=" " required />
+            <label for="name">Full Name</label>
+            <div class="input-focus-line"></div>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder=" " required />
+            <label for="email">Email Address</label>
+            <div class="input-focus-line"></div>
+          </div>
+          <div class="form-group">
+            <textarea id="message" rows="4" placeholder=" " required></textarea>
+            <label for="message">Your Message</label>
+            <div class="input-focus-line"></div>
+          </div>
+          <button type="submit" class="btn-primary w-100 btn-large">Send Inquiry <span>&rarr;</span></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <div class="brand">
+        <div class="custom-logo">
+          <div class="logo-banner">B A L T E J</div>
+          <div class="logo-banner">I N F R A</div>
+          <div class="logo-banner logo-small">L L P</div>
+        </div>
+      </div>
+      <p>&copy; 2026 M/s Baltej Infra LLP. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
