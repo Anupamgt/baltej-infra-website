@@ -142,7 +142,10 @@ async function loadPortfolioData() {
     allProjects = await response.json();
     // Sort descending by project value
     allProjects.sort((a, b) => getProjectNumericValue(b) - getProjectNumericValue(a));
-    renderProjects(allProjects);
+    
+    // By default (All filter), only show projects >= 1 Crore INR
+    const defaultProjects = allProjects.filter(p => getProjectNumericValue(p) >= 10000000);
+    renderProjects(defaultProjects);
     initFilters();
   } catch (error) {
     console.error('Error loading portfolio data:', error);
@@ -200,7 +203,8 @@ function initFilters() {
       const filter = e.target.getAttribute('data-filter');
       
       if (filter === 'all') {
-        renderProjects(allProjects);
+        const filtered = allProjects.filter(p => getProjectNumericValue(p) >= 10000000);
+        renderProjects(filtered);
       } else {
         const filtered = allProjects.filter(p => 
           p.tags && p.tags.some(tag => tag.toLowerCase().includes(filter.toLowerCase()))
