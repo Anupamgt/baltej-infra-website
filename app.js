@@ -324,3 +324,27 @@ function initContactForm() {
     }
   });
 }
+
+// Copy Contact Logic
+document.addEventListener('DOMContentLoaded', () => {
+  const copyCard = document.getElementById('copy-contact-card');
+  const feedback = document.getElementById('copy-feedback');
+  
+  if (copyCard && feedback) {
+    copyCard.addEventListener('click', () => {
+      const textToCopy = "+91 96020 12220, +91 98169 61415";
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        const originalText = feedback.innerText;
+        feedback.innerText = "✓ Copied to clipboard!";
+        feedback.style.color = "#4CAF50"; // Green color for success
+        
+        setTimeout(() => {
+          feedback.innerText = originalText;
+          feedback.style.color = "var(--c-gold)";
+        }, 2500);
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
+      });
+    });
+  }
+});
