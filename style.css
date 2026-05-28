@@ -348,6 +348,118 @@ img {
   margin-bottom: 1rem;
 }
 
+/* Major Clients Carousel */
+.major-clients {
+  background-color: var(--c-bg);
+  padding: 60px 0;
+}
+
+.major-clients .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--c-navy);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.accent-line {
+  width: 40px;
+  height: 4px;
+  background-color: var(--c-steel);
+  margin: 0 auto 2rem auto;
+  border-radius: 2px;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.carousel-nav {
+  background: #FFFFFF;
+  border: 1px solid var(--c-border);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--c-text-muted);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.carousel-nav:hover {
+  background: var(--c-navy);
+  color: #FFFFFF;
+  border-color: var(--c-navy);
+}
+
+.carousel-track-container {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0 1rem;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.carousel-track-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  gap: 1.5rem;
+}
+
+.client-card {
+  min-width: 200px;
+  max-width: 250px;
+  flex: 1 0 auto;
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  gap: 0.75rem;
+}
+
+.client-logo {
+  max-width: 140px;
+  max-height: 70px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.client-card .client-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--c-navy);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.client-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+}
+
 /* Portfolio */
 .filter-controls {
   display: flex;

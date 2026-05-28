@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initA11yHub();
   loadPortfolioData();
   initContactForm();
+  initCarousel();
 });
 
 // --- 1. Sticky Navbar ---
@@ -182,7 +183,6 @@ function renderProjects(projects) {
         <h3 class="card-title">${p.name}</h3>
         <div class="card-meta">
           <p>Client: <span>${p.client}</span></p>
-          <p>Gross Value: <span>${p.gross_value}</span></p>
           <p>Quality: <span class="quality-badge" ${gradeClass}>${p.quality_grade || 'N/A'}</span></p>
         </div>
       </div>
@@ -322,5 +322,45 @@ function initContactForm() {
       submitBtn.disabled = false;
       submitBtn.innerText = originalBtnText;
     }
+  });
+}
+
+// --- 7. Major Clients Carousel ---
+function initCarousel() {
+  const track = document.getElementById('client-track');
+  const prevBtn = document.getElementById('client-prev');
+  const nextBtn = document.getElementById('client-next');
+  
+  if (!track || !prevBtn || !nextBtn) return;
+  
+  const scrollAmount = 250; // approximate width of one card + gap
+  
+  prevBtn.addEventListener('click', () => {
+    track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+  
+  nextBtn.addEventListener('click', () => {
+    track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+
+  // Optional: Auto-scroll
+  let autoScroll = setInterval(() => {
+    if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 10) {
+      track.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  }, 4000);
+  
+  // Pause on hover
+  document.querySelector('.carousel-wrapper').addEventListener('mouseenter', () => clearInterval(autoScroll));
+  document.querySelector('.carousel-wrapper').addEventListener('mouseleave', () => {
+    autoScroll = setInterval(() => {
+      if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 10) {
+        track.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      }
+    }, 4000);
   });
 }
