@@ -292,19 +292,5 @@
     "numeric_value": 18374152.0,
     "status": "Completed",
     "quality_grade": "Satisfactory"
-  },
-  {
-    "id": "nan",
-    "name": "Total",
-    "client": "Unknown",
-    "tags": [
-      "General Civil Works"
-    ],
-    "category": "General Civil Works",
-    "awarded_value": "Rs. 63.46 Cr",
-    "gross_value": "Rs. 0",
-    "numeric_value": 634611622.2,
-    "status": "nan",
-    "quality_grade": "Satisfactory"
   }
 ]
