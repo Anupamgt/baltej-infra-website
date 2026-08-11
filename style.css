@@ -422,6 +422,159 @@ img {
   padding: 0.5rem;
 }
 
+.stat-link {
+  display: block;
+  transition: transform var(--tr);
+}
+
+.stat-link:hover {
+  transform: translateY(-2px);
+}
+
+.stat-link .stat-label {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(196, 120, 42, 0.45);
+}
+
+/* Hiring strip */
+.hiring-strip {
+  background: var(--c-sand);
+  border-bottom: 1px solid var(--c-line);
+  padding: 1.35rem 0;
+}
+
+.hiring-strip-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.hiring-kicker {
+  font-family: var(--font-display);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--c-copper);
+  margin-bottom: 0.25rem;
+}
+
+.hiring-copy h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--c-ink);
+  margin-bottom: 0.2rem;
+}
+
+.hiring-copy p:last-child {
+  color: var(--c-muted);
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+
+.hiring-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hiring-link {
+  color: var(--c-ink);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.hiring-link:hover {
+  color: var(--c-copper);
+}
+
+.portfolio-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.portfolio-header-row .section-title {
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-count {
+  font-family: var(--font-display);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-copper);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.filter-controls-sticky {
+  position: sticky;
+  top: 4.25rem;
+  z-index: 30;
+  background: rgba(232, 226, 214, 0.92);
+  backdrop-filter: blur(10px);
+  padding: 0.65rem 0;
+  margin-bottom: 1.25rem;
+}
+
+.project-careers-link {
+  display: inline-block;
+  margin-top: 0.85rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--c-copper);
+}
+
+.project-careers-link:hover {
+  color: var(--c-ink);
+}
+
+.team-who {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-copper);
+  margin: 0.15rem 0 0.4rem;
+}
+
+.careers-job-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.65rem;
+  align-items: center;
+  padding-right: 0.75rem;
+}
+
+.careers-job-row .careers-job-summary {
+  padding-right: 0.25rem;
+}
+
+.careers-apply-chip {
+  padding: 0.55rem 0.95rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.careers-portfolio-link {
+  display: inline-block;
+  margin-top: 0.85rem;
+  margin-left: 0.75rem;
+  font-size: 0.88rem;
+  color: var(--c-copper);
+}
+
+.careers-portfolio-link:hover {
+  color: var(--c-ink);
+}
+
 .stat-number {
   font-family: var(--font-display);
   font-size: clamp(2.4rem, 4vw, 3.4rem);
@@ -818,6 +971,14 @@ a.contact-row:hover {
   background: #080c10;
   padding: 2rem 0;
   border-top: 1px solid rgba(232, 226, 214, 0.06);
+}
+
+.main-footer a {
+  color: rgba(232, 226, 214, 0.7);
+}
+
+.main-footer a:hover {
+  color: var(--c-copper-light);
 }
 
 .footer-content {
@@ -1648,6 +1809,55 @@ a.contact-row:hover {
 
   .careers-job-main h3 {
     font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .hiring-strip-inner {
+    align-items: flex-start;
+  }
+
+  .hiring-actions {
+    width: 100%;
+  }
+
+  .hiring-actions .btn-primary {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .filter-controls-sticky {
+    top: 3.6rem;
+    margin-inline: calc(50% - 50vw);
+    width: 100vw;
+    padding-inline: 4%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+  }
+
+  .filter-controls-sticky::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-controls-sticky .filter-btn {
+    flex: 0 0 auto;
+  }
+
+  .careers-job-row {
+    grid-template-columns: 1fr;
+    padding: 0 0 0.75rem;
+  }
+
+  .careers-apply-chip {
+    margin: 0 1rem;
+    width: calc(100% - 2rem);
+    justify-content: center;
+  }
+
+  .careers-portfolio-link {
+    display: block;
+    margin-left: 0;
   }
 }
 

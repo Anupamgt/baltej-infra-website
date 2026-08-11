@@ -79,10 +79,10 @@
   <!-- Impact metrics -->
   <section class="stats-section" aria-label="Company metrics">
     <div class="container stats-rail">
-      <div class="stat-item">
+      <a href="#portfolio" class="stat-item stat-link">
         <div class="stat-number" data-target="27">0</div>
         <div class="stat-label">Major Projects</div>
-      </div>
+      </a>
       <div class="stat-item">
         <div class="stat-number" data-target="5">0</div>
         <div class="stat-label">States Active</div>
@@ -91,9 +91,24 @@
         <div class="stat-number" data-target="1500">0</div>
         <div class="stat-label">MW Plant Infra Supported</div>
       </div>
-      <div class="stat-item">
-        <div class="stat-number" data-target="100">0</div>
-        <div class="stat-label">% Quality Focus</div>
+      <a href="careers.html" class="stat-item stat-link">
+        <div class="stat-number" data-target="6">0</div>
+        <div class="stat-label">Open Roles</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Hiring strip -->
+  <section class="hiring-strip" aria-label="Featured opening">
+    <div class="container hiring-strip-inner">
+      <div class="hiring-copy">
+        <p class="hiring-kicker">We’re hiring</p>
+        <h2>Site Engineer — Highways</h2>
+        <p>Field role on live NH packages · Panchkula / project sites · Full-time</p>
+      </div>
+      <div class="hiring-actions">
+        <a href="apply.html?role=Site%20Engineer%20%E2%80%94%20Highways" class="btn-primary">Apply now</a>
+        <a href="careers.html#openings" class="hiring-link">All openings →</a>
       </div>
     </div>
   </section>
@@ -134,12 +149,15 @@
   <!-- Portfolio -->
   <section id="portfolio" class="portfolio-section section-pad">
     <div class="container">
-      <div class="section-header slide-up">
-        <h2 class="section-title">Our Portfolio</h2>
-        <p class="section-lead">Proven infrastructure delivery across highways and civil works.</p>
+      <div class="section-header slide-up portfolio-header-row">
+        <div>
+          <h2 class="section-title">Our Portfolio</h2>
+          <p class="section-lead">Proven infrastructure delivery across highways and civil works.</p>
+        </div>
+        <p class="portfolio-count" id="portfolio-count" aria-live="polite">—</p>
       </div>
 
-      <div class="filter-controls" id="portfolio-filters">
+      <div class="filter-controls filter-controls-sticky" id="portfolio-filters">
         <button class="filter-btn active" data-filter="all">All Projects</button>
         <button class="filter-btn" data-filter="Highways & Patch Work">Highways</button>
         <button class="filter-btn" data-filter="General Civil Works">Civil Works</button>

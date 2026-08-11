@@ -146,24 +146,31 @@ document.addEventListener('DOMContentLoaded', () => {
       article.dataset.id = job.id;
 
       article.innerHTML = `
-        <button type="button" class="careers-job-summary" aria-expanded="false">
-          <div class="careers-job-main">
-            <h3>${job.title}</h3>
-            <p class="careers-job-meta">${job.locationLabel} · ${job.type} · ${job.experience}</p>
-          </div>
-          <span class="job-dept">${job.teamLabel}</span>
-          <span class="job-toggle" aria-hidden="true">+</span>
-        </button>
+        <div class="careers-job-row">
+          <button type="button" class="careers-job-summary" aria-expanded="false">
+            <div class="careers-job-main">
+              <h3>${job.title}</h3>
+              <p class="careers-job-meta">${job.locationLabel} · ${job.type} · ${job.experience}</p>
+            </div>
+            <span class="job-dept">${job.teamLabel}</span>
+            <span class="job-toggle" aria-hidden="true">+</span>
+          </button>
+          <a class="btn-primary careers-apply-chip" href="apply.html?role=${encodeURIComponent(job.title)}">Apply</a>
+        </div>
         <div class="careers-job-detail" hidden>
           <p>${job.summary}</p>
           <ul>${job.requirements.map((r) => `<li>${r}</li>`).join('')}</ul>
           <a class="btn-primary careers-apply-link" href="apply.html?role=${encodeURIComponent(job.title)}">Apply for this role</a>
+          <a class="careers-portfolio-link" href="index.html#portfolio">See highway &amp; civil packages you’d support →</a>
         </div>
       `;
 
       const summary = article.querySelector('.careers-job-summary');
       const detail = article.querySelector('.careers-job-detail');
       const toggle = article.querySelector('.job-toggle');
+      const applyChip = article.querySelector('.careers-apply-chip');
+
+      applyChip?.addEventListener('click', (e) => e.stopPropagation());
 
       summary.addEventListener('click', () => {
         const open = summary.getAttribute('aria-expanded') === 'true';

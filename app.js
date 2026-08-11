@@ -180,9 +180,38 @@ async function loadPortfolioData() {
   }
 }
 
+function shortenProjectTitle(name, max = 88) {
+  if (!name) return 'Project';
+  const clean = String(name).replace(/\s+/g, ' ').trim();
+  if (clean.length <= max) return clean;
+  const cut = clean.slice(0, max);
+  const lastSpace = cut.lastIndexOf(' ');
+  return `${(lastSpace > 50 ? cut.slice(0, lastSpace) : cut).trim()}…`;
+}
+
+const CAREERS_CROSSLINKS = {
+  '95.0': {
+    label: 'Hiring for corridors like this',
+    href: 'apply.html?role=Site%20Engineer%20%E2%80%94%20Highways',
+  },
+  '67.0': {
+    label: 'See Site Engineer openings',
+    href: 'careers.html#openings',
+  },
+  '100.0': {
+    label: 'Join highway operations',
+    href: 'apply.html?role=QA%20%2F%20QC%20Engineer',
+  },
+};
+
 function renderProjects(projects) {
   const container = document.getElementById('projects-container');
+  const countEl = document.getElementById('portfolio-count');
   container.innerHTML = '';
+
+  if (countEl) {
+    countEl.textContent = `${projects.length} project${projects.length === 1 ? '' : 's'}`;
+  }
 
   if (projects.length === 0) {
     container.innerHTML = '<p>No projects found for this category.</p>';
@@ -193,6 +222,7 @@ function renderProjects(projects) {
     const card = document.createElement('div');
     card.className = 'project-card';
     card.style.animationDelay = `${index * 0.04}s`;
+    if (p.id) card.dataset.projectId = p.id;
 
     let gradeClass = '';
     const grade = (p.quality_grade || '').toLowerCase();
@@ -202,14 +232,21 @@ function renderProjects(projects) {
       gradeClass = 'style="background:#EBF3FB;color:#2E75B6"';
     }
 
+    const shortTitle = shortenProjectTitle(p.name);
+    const cross = CAREERS_CROSSLINKS[String(p.id)] || null;
+    const crossHtml = cross
+      ? `<a class="project-careers-link" href="${cross.href}">${cross.label} →</a>`
+      : '';
+
     card.innerHTML = `
       <div class="card-content">
         <div class="card-tag">${p.tags ? p.tags[0] : 'Project'}${p.period ? ' | ' + p.period : ''}</div>
-        <h3 class="card-title">${p.name}</h3>
+        <h3 class="card-title" title="${p.name.replace(/"/g, '&quot;')}">${shortTitle}</h3>
         <div class="card-meta">
           <p>Client: <span>${p.client}</span></p>
           <p>Quality: <span class="quality-badge" ${gradeClass}>${p.quality_grade || 'N/A'}</span></p>
         </div>
+        ${crossHtml}
       </div>
     `;
     container.appendChild(card);
