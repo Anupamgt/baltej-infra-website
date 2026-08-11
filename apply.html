@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="description" content="Apply for a role at M/s Baltej Infra LLP" />
   <title>Apply | M/s Baltej Infra LLP Careers</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
@@ -13,69 +13,58 @@
 </head>
 <body data-theme="standard" class="page-apply">
 
-  <header class="main-header scrolled careers-header" id="navbar">
+  <header class="main-header scrolled careers-header apply-topbar" id="navbar">
     <div class="container nav-container">
       <a href="index.html" class="brand" aria-label="Baltej Infra LLP Home">
         <span class="brand-mark">BALTEJ</span>
         <span class="brand-sub">INFRA LLP</span>
       </a>
       <nav class="nav-links">
-        <a href="index.html">Home</a>
         <a href="careers.html">Careers</a>
-        <a href="dossier.html">Dossier</a>
         <a href="index.html#contact" class="btn-primary nav-cta">Contact</a>
       </nav>
-      <button class="mobile-toggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="careers.html#openings" class="apply-mobile-back">Jobs</a>
     </div>
   </header>
 
   <main class="apply-page">
-    <div class="container apply-layout">
-      <aside class="apply-job-card" id="apply-job-summary">
-        <p class="eyebrow">Applying for</p>
+    <div class="container apply-shell">
+      <a href="careers.html#openings" class="apply-back-link apply-back-desktop">← All jobs</a>
+
+      <header class="apply-role-banner">
+        <p class="apply-role-label">Applying for</p>
         <h1 id="apply-job-title">Role</h1>
         <p class="apply-job-meta" id="apply-job-meta">Baltej Infra LLP</p>
-        <ul class="apply-job-facts" id="apply-job-facts"></ul>
-        <a href="careers.html#openings" class="apply-back-link">← Back to all jobs</a>
-      </aside>
+        <p class="apply-job-chips" id="apply-job-facts"></p>
+      </header>
 
       <section class="apply-form-panel">
         <div id="apply-form-view">
-          <h2 class="apply-form-heading">Submit your application</h2>
-          <p class="apply-form-lead">Upload your resume and share a few details — similar to a LinkedIn Easy Apply flow.</p>
+          <form id="job-application-form" class="apply-form" novalidate>
+            <div class="apply-field">
+              <label for="apply-name">Full name</label>
+              <input id="apply-name" name="name" type="text" autocomplete="name" required placeholder="Your full name" />
+            </div>
 
-          <form id="job-application-form" class="linkedin-apply-form" novalidate>
-            <fieldset class="apply-fieldset">
-              <legend>Contact info</legend>
+            <div class="apply-row">
               <div class="apply-field">
-                <label for="apply-name">Full name <span aria-hidden="true">*</span></label>
-                <input id="apply-name" name="name" type="text" autocomplete="name" required />
+                <label for="apply-email">Email</label>
+                <input id="apply-email" name="email" type="email" autocomplete="email" required placeholder="you@email.com" inputmode="email" />
               </div>
               <div class="apply-field">
-                <label for="apply-email">Email <span aria-hidden="true">*</span></label>
-                <input id="apply-email" name="email" type="email" autocomplete="email" required />
+                <label for="apply-phone">Phone</label>
+                <input id="apply-phone" name="phone" type="tel" autocomplete="tel" required placeholder="+91 …" inputmode="tel" />
               </div>
-              <div class="apply-field">
-                <label for="apply-phone">Phone <span aria-hidden="true">*</span></label>
-                <input id="apply-phone" name="phone" type="tel" autocomplete="tel" required />
-              </div>
-              <div class="apply-field">
-                <label for="apply-location">Current city</label>
-                <input id="apply-location" name="location" type="text" autocomplete="address-level2" placeholder="e.g. Panchkula, Haryana" />
-              </div>
-            </fieldset>
+            </div>
 
-            <fieldset class="apply-fieldset">
-              <legend>Resume</legend>
-              <div
-                class="resume-dropzone"
-                id="resume-dropzone"
-                tabindex="0"
-                role="button"
-                aria-describedby="resume-help"
-              >
+            <div class="apply-field">
+              <label for="apply-location">City <span class="optional">(optional)</span></label>
+              <input id="apply-location" name="location" type="text" autocomplete="address-level2" placeholder="e.g. Panchkula" />
+            </div>
+
+            <div class="apply-field">
+              <label for="apply-resume">Resume</label>
+              <div class="resume-dropzone" id="resume-dropzone" tabindex="0" role="button" aria-describedby="resume-help">
                 <input
                   type="file"
                   id="apply-resume"
@@ -84,9 +73,8 @@
                   hidden
                 />
                 <div class="resume-dropzone-idle" id="resume-idle">
-                  <p class="resume-drop-title">Upload your resume</p>
-                  <p class="resume-drop-sub">Drag &amp; drop or <span class="resume-browse">browse files</span></p>
-                  <p id="resume-help" class="resume-help">PDF or Word · Max 5 MB</p>
+                  <p class="resume-drop-title">Tap to upload resume</p>
+                  <p id="resume-help" class="resume-help">PDF or Word · max 5 MB</p>
                 </div>
                 <div class="resume-dropzone-file" id="resume-file" hidden>
                   <div class="resume-file-icon" aria-hidden="true">PDF</div>
@@ -94,58 +82,42 @@
                     <p class="resume-file-name" id="resume-file-name"></p>
                     <p class="resume-file-size" id="resume-file-size"></p>
                   </div>
-                  <button type="button" class="resume-remove" id="resume-remove" aria-label="Remove resume">Remove</button>
+                  <button type="button" class="resume-remove" id="resume-remove">Change</button>
                 </div>
               </div>
               <p class="field-error" id="resume-error" hidden>Please upload a resume (PDF or Word, max 5 MB).</p>
-            </fieldset>
+            </div>
 
-            <fieldset class="apply-fieldset">
-              <legend>Additional information</legend>
-              <div class="apply-field">
-                <label for="apply-linkedin">LinkedIn profile (optional)</label>
-                <input id="apply-linkedin" name="linkedin" type="url" placeholder="https://linkedin.com/in/…" />
-              </div>
-              <div class="apply-field">
-                <label for="apply-cover">Cover note / message</label>
-                <textarea id="apply-cover" name="cover" rows="5" placeholder="Anything you’d like the hiring team to know…"></textarea>
-              </div>
-            </fieldset>
+            <div class="apply-field">
+              <label for="apply-cover">Message <span class="optional">(optional)</span></label>
+              <textarea id="apply-cover" name="cover" rows="3" placeholder="Short note for the hiring team"></textarea>
+            </div>
 
             <input type="hidden" id="apply-role" name="role" value="" />
+            <input type="hidden" id="apply-linkedin" name="linkedin" value="" />
 
             <label class="apply-consent">
               <input type="checkbox" id="apply-consent" required />
-              <span>I confirm the information is accurate and agree to be contacted about this role.</span>
+              <span>I agree to be contacted about this role.</span>
             </label>
 
-            <button type="submit" class="btn-primary apply-submit" id="apply-submit">Submit application</button>
-            <p class="apply-disclaimer">This is a front-end prototype. Applications are not emailed yet — you’ll see a confirmation on this page.</p>
+            <div class="apply-actions">
+              <button type="submit" class="btn-primary apply-submit" id="apply-submit">Submit application</button>
+            </div>
           </form>
         </div>
 
         <div id="apply-success" class="apply-success" hidden>
-          <p class="eyebrow">Application received</p>
-          <h2>Thanks — your application is in.</h2>
+          <h2>Application submitted</h2>
           <p id="apply-success-copy"></p>
           <div class="apply-success-actions">
-            <a href="careers.html#openings" class="btn-primary">Browse more roles</a>
-            <a href="index.html" class="btn-ghost apply-ghost-dark">Back to homepage</a>
+            <a href="careers.html#openings" class="btn-primary">View other roles</a>
+            <a href="index.html" class="apply-text-link">Home</a>
           </div>
         </div>
       </section>
     </div>
   </main>
-
-  <footer class="main-footer">
-    <div class="container footer-content">
-      <a href="index.html" class="brand">
-        <span class="brand-mark">BALTEJ</span>
-        <span class="brand-sub">INFRA LLP</span>
-      </a>
-      <p>&copy; 2026 M/s Baltej Infra LLP · <a href="careers.html">Careers</a></p>
-    </div>
-  </footer>
 
   <script src="app.js"></script>
   <script src="apply.js"></script>

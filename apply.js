@@ -66,9 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const facts = document.getElementById('apply-job-facts');
   facts.innerHTML = `
-    <li><span>Location</span><strong>${meta.location}</strong></li>
-    <li><span>Type</span><strong>${meta.type}</strong></li>
-    <li><span>Experience</span><strong>${meta.experience}</strong></li>
+    <span>${meta.location}</span>
+    <span>${meta.type}</span>
+    <span>${meta.experience}</span>
   `;
 
   initResumeUpload();
@@ -231,7 +231,7 @@ function initApplicationForm(role) {
       /* ignore storage errors */
     }
 
-    successCopy.textContent = `${name}, we recorded your application for “${role}” with resume “${resume.name}”. This demo stores it locally in your browser only.`;
+    successCopy.textContent = `Thanks, ${name}. We’ve received your application for “${role}”${resume ? ` with “${resume.name}”` : ''}.`;
     formView.hidden = true;
     success.hidden = false;
     window.scrollTo({ top: 0, behavior: 'smooth' });
