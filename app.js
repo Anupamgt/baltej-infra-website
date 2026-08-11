@@ -232,16 +232,21 @@ function renderProjects(projects) {
       gradeClass = 'style="background:#EBF3FB;color:#2E75B6"';
     }
 
-    const shortTitle = shortenProjectTitle(p.name);
     const cross = CAREERS_CROSSLINKS[String(p.id)] || null;
+    if (cross) card.classList.add('has-careers-link');
     const crossHtml = cross
       ? `<a class="project-careers-link" href="${cross.href}">${cross.label} →</a>`
       : '';
 
+    const safeTitle = String(p.name || '')
+      .replace(/&/g, '&amp;')
+      .replace(/"/g, '&quot;')
+      .replace(/</g, '&lt;');
+
     card.innerHTML = `
       <div class="card-content">
         <div class="card-tag">${p.tags ? p.tags[0] : 'Project'}${p.period ? ' | ' + p.period : ''}</div>
-        <h3 class="card-title" title="${p.name.replace(/"/g, '&quot;')}">${shortTitle}</h3>
+        <h3 class="card-title" title="${safeTitle}">${shortTitle}</h3>
         <div class="card-meta">
           <p>Client: <span>${p.client}</span></p>
           <p>Quality: <span class="quality-badge" ${gradeClass}>${p.quality_grade || 'N/A'}</span></p>
