@@ -164,6 +164,7 @@ function getProjectNumericValue(proj) {
 
 async function loadPortfolioData() {
   const container = document.getElementById('projects-container');
+  if (!container) return;
   try {
     const response = await fetch('data.json');
     if (!response.ok) throw new Error('Network response was not ok');
