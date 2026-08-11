@@ -53,8 +53,30 @@
     .stat-box span { font-size: 0.85rem; color: rgba(232,226,214,0.55); }
     .cap-block { margin-bottom: 1rem; }
     .cap-block h3 { font-family: var(--font-display); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.25rem; }
+    .dossier-logo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.85rem;
+      margin-top: 0.75rem;
+    }
+    .dossier-logo-card {
+      background: #fff;
+      min-height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1rem;
+    }
+    .dossier-logo-card img {
+      max-height: 52px;
+      max-width: 140px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
     @media (max-width: 760px) {
       .stat-row { grid-template-columns: 1fr 1fr; }
+      .dossier-logo-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
@@ -110,14 +132,17 @@
     <section class="slide">
       <p class="slide-kicker">Clients</p>
       <h2>Trusted by</h2>
-      <ul>
-        <li>NHAI — National Highways Authority of India</li>
-        <li>SJVN Limited</li>
-        <li>NHLML — National Highways Logistics Management Limited</li>
-        <li>Airports Authority of India (AAI)</li>
-        <li>East Central Railway</li>
-        <li>GR Infraprojects · NHIT · MVD · Mohan Mutha · and others</li>
-      </ul>
+      <div class="dossier-logo-grid">
+        <div class="dossier-logo-card" title="NHAI"><img src="images/logo-nhai.png" alt="NHAI"></div>
+        <div class="dossier-logo-card" title="SJVN"><img src="images/sjvn-logo.png" alt="SJVN"></div>
+        <div class="dossier-logo-card" title="NHLML"><img src="images/logo-nhlml.jpg" alt="NHLML"></div>
+        <div class="dossier-logo-card" title="AAI"><img src="images/logo-aai.png" alt="AAI"></div>
+        <div class="dossier-logo-card" title="East Central Railway"><img src="images/logo-ecr.jpg" alt="East Central Railway"></div>
+        <div class="dossier-logo-card" title="GR Infraprojects"><img src="images/logo-gril.png" alt="GR Infraprojects"></div>
+        <div class="dossier-logo-card" title="NHIT"><img src="images/logo-nhit.png" alt="NHIT"></div>
+        <div class="dossier-logo-card" title="MVD"><img src="images/mvd-logo.jpg" alt="MVD"></div>
+        <div class="dossier-logo-card" title="Mohan Mutha"><img src="images/logo-mm.png" alt="Mohan Mutha"></div>
+      </div>
     </section>
 
     <section class="slide">
