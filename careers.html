@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Careers at M/s Baltej Infra LLP — find roles in engineering, site operations, and corporate teams." />
+  <title>Careers | M/s Baltej Infra LLP</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body data-theme="standard" class="page-careers">
+
+  <aside id="a11y-hub" class="a11y-panel" aria-label="Accessibility Controls">
+    <button id="a11y-toggle" class="a11y-btn" aria-expanded="false" aria-controls="a11y-menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+      <span class="sr-only">Accessibility</span>
+    </button>
+    <div id="a11y-menu" class="a11y-content">
+      <h3>Accessibility Hub</h3>
+      <div class="a11y-control">
+        <span>Font Size</span>
+        <button id="btn-font-dec" aria-label="Decrease Font Size">A-</button>
+        <button id="btn-font-inc" aria-label="Increase Font Size">A+</button>
+      </div>
+      <div class="a11y-control">
+        <label for="toggle-contrast">High Contrast</label>
+        <input type="checkbox" id="toggle-contrast" />
+      </div>
+      <div class="a11y-control">
+        <label for="toggle-motion">Reduce Motion</label>
+        <input type="checkbox" id="toggle-motion" />
+      </div>
+    </div>
+  </aside>
+
+  <header class="main-header scrolled careers-header" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand" aria-label="Baltej Infra LLP Home">
+        <span class="brand-mark">BALTEJ</span>
+        <span class="brand-sub">INFRA LLP</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#portfolio">Portfolio</a>
+        <a href="careers.html" aria-current="page">Careers</a>
+        <a href="dossier_v2.pdf" download>Dossier</a>
+        <a href="index.html#contact" class="btn-primary nav-cta">Contact</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Careers landing hero (separate site section) -->
+  <section class="careers-hero">
+    <div class="careers-hero-bg" aria-hidden="true"></div>
+    <div class="container careers-hero-inner">
+      <p class="careers-kicker">Baltej Infra Careers</p>
+      <h1>Find your next role building India’s infrastructure.</h1>
+      <p class="careers-hero-lead">Search openings across engineering, site operations, and corporate teams — a dedicated careers destination, separate from the company homepage.</p>
+
+      <form class="careers-search" id="careers-search-form" role="search">
+        <label class="sr-only" for="careers-query">Search jobs</label>
+        <input id="careers-query" type="search" placeholder="Search by role, skill, or keyword" autocomplete="off" />
+        <label class="sr-only" for="careers-location">Location</label>
+        <select id="careers-location">
+          <option value="all">All locations</option>
+          <option value="jaipur">Jaipur</option>
+          <option value="panchkula">Panchkula</option>
+          <option value="himachal">Himachal / Project sites</option>
+          <option value="punjab">Punjab corridors</option>
+          <option value="multi">Multi-site</option>
+        </select>
+        <button type="submit" class="btn-primary">Search</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Teams -->
+  <section class="careers-teams section-pad" id="teams">
+    <div class="container">
+      <div class="section-header slide-up">
+        <p class="eyebrow">Teams</p>
+        <h2 class="section-title">Explore by team</h2>
+        <p class="section-lead">Browse the kinds of work we do — then jump into matching open roles.</p>
+      </div>
+      <div class="careers-team-grid stagger-container">
+        <button type="button" class="careers-team-card stagger-item" data-team="engineering">
+          <span class="cap-index">01</span>
+          <h3>Engineering</h3>
+          <p>Site, structural, and design roles supporting highway and civil packages.</p>
+          <span class="team-cta">View roles →</span>
+        </button>
+        <button type="button" class="careers-team-card stagger-item" data-team="site">
+          <span class="cap-index">02</span>
+          <h3>Site Operations</h3>
+          <p>Project delivery, QA/QC, and field leadership on live corridors.</p>
+          <span class="team-cta">View roles →</span>
+        </button>
+        <button type="button" class="careers-team-card stagger-item" data-team="corporate">
+          <span class="cap-index">03</span>
+          <h3>Corporate</h3>
+          <p>Billing, contracts, HR, and office support for multi-state projects.</p>
+          <span class="team-cta">View roles →</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Job results -->
+  <section class="careers-results section-pad" id="openings">
+    <div class="container">
+      <div class="careers-results-header slide-up">
+        <div>
+          <p class="eyebrow">Open roles</p>
+          <h2 class="section-title">Latest opportunities</h2>
+        </div>
+        <p class="careers-count" id="careers-count">6 openings</p>
+      </div>
+
+      <div class="careers-filters" id="careers-filters">
+        <button type="button" class="filter-btn active" data-filter="all">All teams</button>
+        <button type="button" class="filter-btn" data-filter="engineering">Engineering</button>
+        <button type="button" class="filter-btn" data-filter="site">Site Operations</button>
+        <button type="button" class="filter-btn" data-filter="corporate">Corporate</button>
+      </div>
+
+      <div class="careers-job-list" id="careers-job-list" aria-live="polite">
+        <!-- populated by careers.js -->
+      </div>
+      <p class="jobs-empty" id="careers-empty" hidden>No roles match your search. Try another keyword or location.</p>
+    </div>
+  </section>
+
+  <!-- Life at Baltej -->
+  <section class="careers-life section-pad" id="life">
+    <div class="container">
+      <div class="section-header slide-up">
+        <p class="eyebrow">Life at Baltej</p>
+        <h2 class="section-title">How we work</h2>
+        <p class="section-lead">Field-first delivery with partners like NHAI, SJVN, and NHLML — from Jaipur and Panchkula to Himalayan corridors.</p>
+      </div>
+      <div class="careers-life-grid stagger-container">
+        <article class="careers-life-item stagger-item">
+          <h3>Real sites</h3>
+          <p>Your work lands on highways, structures, and hydro-power civil packages — not only desks.</p>
+        </article>
+        <article class="careers-life-item stagger-item">
+          <h3>Multi-state footprint</h3>
+          <p>Deployments across Rajasthan, Himachal, Punjab, and project offices as needed.</p>
+        </article>
+        <article class="careers-life-item stagger-item">
+          <h3>Growth path</h3>
+          <p>Move from site supervision into planning, QA leadership, and project management.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apply interest -->
+  <section class="careers-apply section-pad" id="apply">
+    <div class="container careers-apply-grid stagger-container">
+      <div class="stagger-item">
+        <p class="eyebrow light">Apply</p>
+        <h2 class="section-title on-dark">Interested in a role?</h2>
+        <p class="contact-subtitle">This careers form is a prototype for the separate careers page. Submissions show a confirmation only — nothing is emailed yet.</p>
+        <div class="contact-cards">
+          <div class="contact-row">
+            <span class="contact-label">Careers desk</span>
+            <span class="contact-value">careers@baltejinfra.example · +91 98169 61415</span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">Offices</span>
+            <span class="contact-value">Jaipur · Panchkula · Project sites</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap stagger-item">
+        <form class="contact-form" id="careers-interest-form">
+          <h3 class="form-title">Register interest</h3>
+          <div class="form-group">
+            <input type="text" id="career-name" name="name" placeholder=" " required />
+            <label for="career-name">Full Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="career-email" name="email" placeholder=" " required />
+            <label for="career-email">Email Address</label>
+          </div>
+          <div class="form-group form-group-select">
+            <select id="career-role" name="role" required>
+              <option value="" disabled selected>Select a role</option>
+              <option>Site Engineer — Highways</option>
+              <option>Structural / Design Engineer</option>
+              <option>Project Manager — Civil Works</option>
+              <option>QA / QC Engineer</option>
+              <option>Billing &amp; Contracts Executive</option>
+              <option>HR &amp; Admin Coordinator</option>
+              <option>General interest</option>
+            </select>
+            <label for="career-role" class="select-label">Role</label>
+          </div>
+          <div class="form-group">
+            <textarea id="career-message" name="message" rows="4" placeholder=" " required></textarea>
+            <label for="career-message">Brief background</label>
+          </div>
+          <button type="submit" class="btn-primary w-100">Submit interest →</button>
+          <p class="form-note" id="careers-form-note" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">BALTEJ</span>
+        <span class="brand-sub">INFRA LLP</span>
+      </a>
+      <p>&copy; 2026 M/s Baltej Infra LLP · <a href="index.html">Back to homepage</a></p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="careers.js"></script>
+</body>
+</html>
