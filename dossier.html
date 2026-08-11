@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brief Dossier | M/s Baltej Infra LLP</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    body.page-dossier { background: var(--c-ink); color: var(--c-sand); }
+    .dossier-bar {
+      position: fixed; inset: 0 0 auto 0; z-index: 50;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      padding: 0.85rem 1.25rem;
+      background: rgba(12,18,24,0.92); border-bottom: 1px solid rgba(232,226,214,0.1);
+      backdrop-filter: blur(12px);
+    }
+    .dossier-bar a { color: rgba(232,226,214,0.75); font-size: 0.9rem; }
+    .dossier-bar a:hover { color: var(--c-copper-light); }
+    .dossier-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+    .deck {
+      max-width: 1100px; margin: 0 auto; padding: 5.5rem 1.25rem 4rem;
+      display: grid; gap: 1.25rem;
+    }
+    .slide {
+      min-height: 62vh;
+      background:
+        radial-gradient(ellipse 70% 50% at 90% 10%, rgba(196,120,42,0.18), transparent 55%),
+        #121a22;
+      border: 1px solid rgba(232,226,214,0.08);
+      padding: clamp(1.75rem, 4vw, 3rem);
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .slide-kicker {
+      font-family: var(--font-display); letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--c-copper); font-size: 0.85rem; margin-bottom: 0.85rem;
+    }
+    .slide h1, .slide h2 {
+      font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.03em;
+      line-height: 1.05; margin-bottom: 1rem;
+    }
+    .slide h1 { font-size: clamp(2.4rem, 6vw, 4rem); }
+    .slide h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); }
+    .slide p, .slide li { color: rgba(232,226,214,0.68); font-weight: 300; max-width: 42rem; }
+    .slide ul { margin: 0.75rem 0 0 1.1rem; display: grid; gap: 0.55rem; }
+    .slide-accent { width: 3rem; height: 3px; background: var(--c-copper); margin: 1rem 0 1.25rem; }
+    .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-top: 1.5rem; }
+    .stat-box { background: #1a2330; padding: 1.25rem 1rem; }
+    .stat-box strong { display: block; font-family: var(--font-display); font-size: 2rem; color: var(--c-copper); }
+    .stat-box span { font-size: 0.85rem; color: rgba(232,226,214,0.55); }
+    .cap-block { margin-bottom: 1rem; }
+    .cap-block h3 { font-family: var(--font-display); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.25rem; }
+    @media (max-width: 760px) {
+      .stat-row { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body class="page-dossier">
+  <div class="dossier-bar">
+    <a href="index.html">← Back to website</a>
+    <div class="dossier-actions">
+      <a class="btn-primary" href="Baltej_Infra_Brief_Dossier.pptx" download>Download PPTX</a>
+      <a class="btn-ghost" href="dossier_v2.pdf" download>Full PDF (legacy)</a>
+    </div>
+  </div>
+
+  <main class="deck" aria-label="Brief company dossier slides">
+    <section class="slide">
+      <p class="slide-kicker">M/s Baltej Infra LLP</p>
+      <div class="slide-accent"></div>
+      <h1>Company Dossier</h1>
+      <p>Highway construction · Turnkey contracting · Civil engineering</p>
+      <p style="margin-top:1.5rem;font-size:0.9rem;opacity:0.7">Brief overview · 2026 · Draft for stakeholder review</p>
+    </section>
+
+    <section class="slide">
+      <p class="slide-kicker">Who we are</p>
+      <h2>Engineering excellence from Jaipur to the Himalayas</h2>
+      <p>Baltej Infra LLP delivers turnkey civil and highway packages across northern and expanding Indian corridors.</p>
+      <ul>
+        <li>Based in Panchkula (Corporate) with multi-state project delivery</li>
+        <li>Focus: highways, hydro-power civil works, structural &amp; general contracting</li>
+        <li>Clients include NHAI, SJVN, NHLML, AAI, East Central Railway, and leading EPC firms</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <p class="slide-kicker">What we do</p>
+      <h2>Core capabilities</h2>
+      <div class="cap-block"><h3>01 Turnkey Contracts</h3><p>End-to-end execution from design through delivery.</p></div>
+      <div class="cap-block"><h3>02 Highway Construction</h3><p>Mountain terrain, O&amp;M, restoration, and corridor works.</p></div>
+      <div class="cap-block"><h3>03 In-House Engineering</h3><p>Geotechnical and structural design support.</p></div>
+      <div class="cap-block"><h3>04 General Contracting</h3><p>Building and industrial infrastructure packages.</p></div>
+    </section>
+
+    <section class="slide">
+      <p class="slide-kicker">Snapshot</p>
+      <h2>Delivery at a glance</h2>
+      <div class="stat-row">
+        <div class="stat-box"><strong>27+</strong><span>Major projects</span></div>
+        <div class="stat-box"><strong>5+</strong><span>States active</span></div>
+        <div class="stat-box"><strong>1500</strong><span>MW plant infra</span></div>
+        <div class="stat-box"><strong>100%</strong><span>Quality focus</span></div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <p class="slide-kicker">Clients</p>
+      <h2>Trusted by</h2>
+      <ul>
+        <li>NHAI — National Highways Authority of India</li>
+        <li>SJVN Limited</li>
+        <li>NHLML — National Highways Logistics Management Limited</li>
+        <li>Airports Authority of India (AAI)</li>
+        <li>East Central Railway</li>
+        <li>GR Infraprojects · NHIT · MVD · Mohan Mutha · and others</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <p class="slide-kicker">Portfolio</p>
+      <h2>Where we deliver</h2>
+      <ul>
+        <li>National highway O&amp;M, protection, and black-spot rectification</li>
+        <li>Access roads and connectivity for hydro / logistics assets</li>
+        <li>Safety furniture, fencing, view cutters, and corridor works</li>
+        <li>Industrial / plant civil packages for power and related infra</li>
+      </ul>
+      <p style="margin-top:1.25rem">Full project list on the website → Portfolio</p>
+    </section>
+
+    <section class="slide">
+      <p class="slide-kicker">Contact</p>
+      <h2>Get in touch</h2>
+      <p><strong style="color:var(--c-sand);font-weight:500">Corporate Office</strong><br/>
+        SCO 297, Second Floor, Above Union Bank of India,<br/>
+        Sector-20, Panchkula — 134117</p>
+      <ul>
+        <li>Phone: 01724331410 · +91 98169 61415</li>
+        <li>Email: info@baltejinfra.com</li>
+      </ul>
+      <p style="margin-top:1.25rem">Detailed technical dossier PDF available on request.</p>
+    </section>
+  </main>
+</body>
+</html>
