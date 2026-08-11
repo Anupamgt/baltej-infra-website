@@ -114,7 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const listEl = document.getElementById('careers-job-list');
   const emptyEl = document.getElementById('careers-empty');
   const countEl = document.getElementById('careers-count');
-  const roleSelect = document.getElementById('career-role');
 
   function matches(job) {
     const teamOk = activeTeam === 'all' || job.team === activeTeam;
@@ -158,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="careers-job-detail" hidden>
           <p>${job.summary}</p>
           <ul>${job.requirements.map((r) => `<li>${r}</li>`).join('')}</ul>
-          <a class="btn-primary careers-apply-link" href="#apply" data-role="${job.title}">Apply for this role</a>
+          <a class="btn-primary careers-apply-link" href="apply.html?role=${encodeURIComponent(job.title)}">Apply for this role</a>
         </div>
       `;
 
@@ -182,13 +181,6 @@ document.addEventListener('DOMContentLoaded', () => {
         detail.hidden = open;
         article.classList.toggle('open', !open);
         toggle.textContent = open ? '+' : '−';
-      });
-
-      article.querySelector('.careers-apply-link')?.addEventListener('click', () => {
-        if (!roleSelect) return;
-        [...roleSelect.options].forEach((opt) => {
-          opt.selected = opt.textContent === job.title;
-        });
       });
 
       listEl.appendChild(article);
@@ -232,19 +224,6 @@ document.addEventListener('DOMContentLoaded', () => {
       render();
       document.getElementById('openings')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
-  });
-
-  document.getElementById('careers-interest-form')?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const name = document.getElementById('career-name')?.value?.trim() || 'there';
-    const role = document.getElementById('career-role')?.value || 'the selected role';
-    const note = document.getElementById('careers-form-note');
-    if (note) {
-      note.textContent = `Thanks, ${name}. Your interest for “${role}” is recorded on this careers mockup only — no email was sent.`;
-    }
-    form.reset();
-    if (roleSelect) roleSelect.selectedIndex = 0;
   });
 
   render();
