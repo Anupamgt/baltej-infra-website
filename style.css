@@ -44,6 +44,10 @@
   box-sizing: border-box;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 html {
   font-size: 16px;
   scroll-behavior: smooth;
@@ -1602,14 +1606,10 @@ a.contact-row:hover {
 .resume-dropzone {
   border: 1.5px dashed rgba(26, 31, 38, 0.22);
   background: var(--c-paper);
-  padding: 1.15rem 1rem;
-  text-align: center;
+  padding: 1.25rem 1rem;
   cursor: pointer;
   transition: border-color var(--tr), background var(--tr);
-  min-height: 96px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: var(--radius);
 }
 
 .resume-dropzone:hover,
@@ -1621,19 +1621,25 @@ a.contact-row:hover {
 }
 
 .resume-dropzone.has-file {
-  text-align: left;
   cursor: default;
   border-style: solid;
   border-color: rgba(26, 31, 38, 0.14);
   background: #fff;
-  justify-content: stretch;
-  padding: 0.85rem 0.95rem;
+  padding: 0.8rem 0.9rem;
+}
+
+.resume-dropzone-idle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  text-align: center;
 }
 
 .resume-drop-title {
   font-weight: 500;
   color: var(--c-ink);
-  margin-bottom: 0.2rem;
+  font-size: 0.98rem;
 }
 
 .resume-help {
@@ -1650,15 +1656,16 @@ a.contact-row:hover {
 
 .resume-file-icon {
   flex-shrink: 0;
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   display: grid;
   place-items: center;
   background: var(--c-ink);
   color: var(--c-copper-light);
   font-family: var(--font-display);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   letter-spacing: 0.05em;
+  border-radius: var(--radius);
 }
 
 .resume-file-name {
