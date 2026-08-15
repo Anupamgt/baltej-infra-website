@@ -311,6 +311,9 @@ function initA11yHub() {
   const menu = document.getElementById('a11y-menu');
   const htmlRoot = document.documentElement;
 
+  // The application page does not carry the accessibility panel.
+  if (!toggleBtn || !menu) return;
+
   toggleBtn.addEventListener('click', () => {
     const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
     toggleBtn.setAttribute('aria-expanded', !isExpanded);
