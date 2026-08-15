@@ -46,10 +46,10 @@ const CAREERS_JOBS = [
     type: 'Full-time',
     experience: '8+ yrs',
     summary:
-      'Own schedule, cost, and quality for assigned packages. Interface with clients and lead site supervision teams.',
+      'Own schedule, cost, and quality for assigned packages. Lead site supervision teams and handle client correspondence.',
     requirements: [
-      'Proven delivery on highway or industrial civil projects',
-      'Strong client communication and documentation habits',
+      'Delivery record on highway or industrial civil projects',
+      'Client communication and documentation discipline',
       'Ready to base near active project locations',
     ],
   },
@@ -84,7 +84,7 @@ const CAREERS_JOBS = [
     requirements: [
       'Civil background or contracts experience',
       'Comfortable with measurement books and client formats',
-      'Strong Excel and documentation skills',
+      'Excel and documentation skills',
     ],
   },
   {
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <p>${job.summary}</p>
           <ul>${job.requirements.map((r) => `<li>${r}</li>`).join('')}</ul>
           <a class="btn-primary careers-apply-link" href="apply.html?role=${encodeURIComponent(job.title)}">Apply for this role</a>
-          <a class="careers-portfolio-link" href="index.html#portfolio">See highway &amp; civil packages you’d support →</a>
+          <a class="careers-portfolio-link" href="index.html#portfolio">See the packages this role supports →</a>
         </div>
       `;
 

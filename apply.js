@@ -231,7 +231,7 @@ function initApplicationForm(role) {
       /* ignore storage errors */
     }
 
-    successCopy.textContent = `Thanks, ${name}. We’ve received your application for “${role}”${resume ? ` with “${resume.name}”` : ''}.`;
+    successCopy.textContent = `Application received for “${role}”${resume ? `, with ${resume.name}` : ''}. The hiring team will reply by email.`;
     formView.hidden = true;
     success.hidden = false;
     window.scrollTo({ top: 0, behavior: 'smooth' });
