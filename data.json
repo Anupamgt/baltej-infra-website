@@ -1,6 +1,7 @@
 [
   {
     "id": "24.1",
+    "title": "NH-88 road maintenance, Himachal Pradesh",
     "name": "Four laning of Shimta- Mataur Section of NH- 88 (New NH-205) from Km 0/000 to Km 223/700 in the State of Himachal Pradesh- Maintenance of existing road from Ch. 65.000 to Ch. 71.000.",
     "client": "MVD Cementation & Construction",
     "tags": [
@@ -15,6 +16,7 @@
   },
   {
     "id": "57.0",
+    "title": "Sunni Dam access road, Himachal Pradesh",
     "name": "Construction of Road (7/9m wide) from proposed Double Lane steel Truss bridge to dam top of SDHEP- Right bank (PCD-15)",
     "client": "SJVN Limited",
     "tags": [
@@ -29,6 +31,7 @@
   },
   {
     "id": "67.0",
+    "title": "NH-5 protection works, Parwanoo-Solan",
     "name": "Operation & Maintenance of Four Laning of Parwanoo-Solan Section of NH- 22 (Now NH-5) from Km. 67.000 to Km. 106.139 on EPC mode under NHDP Phase-III in the state of Himachal Pradesh - Protection Work",
     "client": "GR Infraprojects Limited",
     "tags": [
@@ -43,6 +46,7 @@
   },
   {
     "id": "72.0",
+    "title": "Nathpa Jhakri road and drainage works",
     "name": "Providing and strengthening of BTRDT Road, Drainage, parapets, slope protection from Check Post to BTRDT from RD 0.00m to 476m at NJHPS Nathpa (PCD- 2819(Civil)/2023)",
     "client": "SJVN Limited",
     "tags": [
@@ -57,6 +61,7 @@
   },
   {
     "id": "74.0",
+    "title": "NH-3 view cutter panels, Bidhipur-Dhilwan",
     "name": "Operation & maintenance of Bidhipur to Dhilwan section of NH-01 (new NH-03) from km 387.100 to 407.100 in the state of Punjab. - Installation of 1650x2 =3300 Sqm. View Cutter (Ultra Micro Perforated View Cutter Panel) of 2m height and for a length of 1650m",
     "client": "Gurbachan Singh Constructions",
     "tags": [
@@ -71,6 +76,7 @@
   },
   {
     "id": "80.0",
+    "title": "NH-3 view cutter panels, Jalandhar-Amritsar",
     "name": "(COS-IV) Work for Installation of View Cutter (Ultra Micro Perforated View Cutter Panel) of 2m height and for a length of 945m from km 406.215 to 406.615 (RHS), 439.030 to 439.200 (LHS), 438.890 to 439.095 (RHS) and Beas at Flyover in front of Police Stations and Army Camps, on Jalandhar-Amritsar section of old NH-01 (New NH-03)",
     "client": "Gurbachan Singh Constructions",
     "tags": [
@@ -85,6 +91,7 @@
   },
   {
     "id": "82.0",
+    "title": "MMLP Jalna external road connectivity",
     "name": "Construction of External Road Connectivity to the Proposed Multi Modal Logistics Park (MMLP) Jalna on EPC mode",
     "client": "Gurbachan Singh Constructions",
     "tags": [
@@ -99,6 +106,7 @@
   },
   {
     "id": "83.0",
+    "title": "SAMU project road and structures",
     "name": "Construction of Road and allied structures at SAMU O&M Project",
     "client": "GR Infraprojects Limited",
     "tags": [
@@ -113,6 +121,7 @@
   },
   {
     "id": "84.0",
+    "title": "Chichra-Kharagpur bus way, West Bengal",
     "name": "Construction of Bus Way with Bus Shelter at Chichra-Kharagpur Road Section in state of West Bengal.",
     "client": "NHIT Eastern Projects",
     "tags": [
@@ -127,6 +136,7 @@
   },
   {
     "id": "85.0",
+    "title": "NH-154 black-spot rectification, Himachal Pradesh",
     "name": "[Long Term rectification Measures of identified Black spot at Ghurkari [HP-(02)-115] from km 79+750 to 80+200 ,Dhelu [HP-(02)-075] from Km 150+000 to 150+300 & at Tandu [HP-(02)-095] from km. 196+220 to 196+780 of NH-154 (old NH-20) in the state of Himachal Pradesh.] on item rate (percentage) basis",
     "client": "MVD Cementation & Construction",
     "tags": [
@@ -141,6 +151,7 @@
   },
   {
     "id": "87.0",
+    "title": "NH-44 right-of-way fencing, Telangana",
     "name": "Providing Chain link fencing along Right of Way of National Highway in Indalwai, Chandrayanpally & Daggi Forest Ranges of Kamareddy District on Nagpur- Hyderabad section of NH-44 in the State of Telangana. ",
     "client": "National Highways Authority of India (NHAI)",
     "tags": [
@@ -155,6 +166,7 @@
   },
   {
     "id": "88.0",
+    "title": "NH-4 special repair, Andaman and Nicobar",
     "name": "Special Repair of National Highway-04 through provision of Road Safety furniture and other miscellaneous works in the stretch from Km 12.00 to Km 45.00 (excluding Km 21.00 to Km 28.00) in the Union Territory of Andaman and Nicobar Island on percentage Rate basis in the FY 2024-25",
     "client": "Mohan Mutha Infrastructures",
     "tags": [
@@ -169,6 +181,7 @@
   },
   {
     "id": "93.0",
+    "title": "OMPS bituminous layers and milling",
     "name": "Providing and Laying DBM, BC, Prime and Tack coat and Milling works at our OMPS Project",
     "client": "GR Infraprojects Limited",
     "tags": [
@@ -183,6 +196,7 @@
   },
   {
     "id": "95.0",
+    "title": "NH-3 flood restoration, Punjab",
     "name": "Permanent rectification & restoration of damages on highway NH-03 occurred due to heavy rainfall & floods in Punjab",
     "client": "Ganeshgarhia Construction",
     "tags": [
@@ -197,6 +211,7 @@
   },
   {
     "id": "98.0",
+    "title": "BRIJ substation civil works",
     "name": "Construction of Transformer, Reactor, Firewall, Building and Civil works for our BRIJ project.",
     "client": "GR Infraprojects Limited",
     "tags": [
@@ -211,7 +226,8 @@
   },
   {
     "id": "100.0",
-    "name": "Rectification of MoRTH identified Blackspot [ID-TG-03-14] by providing RCC Crash barrier, Highway Lighting & Thrie Beam Crash Barrier and other Road safety measures at Kupti Bridge and Bridge Approaches from Km.233/700 to Km. 235/500 on Nagpur-Hyderabad section of NH-44 in the state of Telangana\u201d.",
+    "title": "NH-44 Kupti bridge black-spot works",
+    "name": "Rectification of MoRTH identified Blackspot [ID-TG-03-14] by providing RCC Crash barrier, Highway Lighting & Thrie Beam Crash Barrier and other Road safety measures at Kupti Bridge and Bridge Approaches from Km.233/700 to Km. 235/500 on Nagpur-Hyderabad section of NH-44 in the state of Telangana”.",
     "client": "Gurbachan Singh Constructions",
     "tags": [
       "Highways & Patch Work"
@@ -225,6 +241,7 @@
   },
   {
     "id": "104.0",
+    "title": "NH-130 Limtara bypass service road",
     "name": "Construction of Service Road along Limtara Bypass section from Km 66.587 to Km 67.702 (RHS) of NH 130 (Package-II) in the State of Chhattisgarh.",
     "client": "MVD Cementation & Construction",
     "tags": [
@@ -239,6 +256,7 @@
   },
   {
     "id": "nan",
+    "title": "Shimla bypass package II, Shakral-Dhalli",
     "name": "Shakral Village to Dhalli Section (Shimla Bypass Pkg-II from Km 146.300 to 156.560 and Shimla connectivity from Km 0.000 to Km 0.725)",
     "client": "Gurbachan Singh Constructions",
     "tags": [
@@ -253,6 +271,7 @@
   },
   {
     "id": "nan",
+    "title": "Chhatrari-Marour road, Chamba",
     "name": "Construction of Chhatrari Ghura via Marour Road Km 0/0 to 7/650 in District Chamba (SH: - Improvement of Curve Passing Places, C/o R-Wall, C.D. works, GSB, WBM-II, WBM-III, M/T, side drain, parapets and Sign Board) under NABARD RIDF-XXVIII",
     "client": "MVD Cementation & Construction",
     "tags": [
@@ -267,6 +286,7 @@
   },
   {
     "id": "nan",
+    "title": "NH-88 and NH-154 protection works",
     "name": "Protection & Restoration works at various sections of NH-88 (Shimla-Mataur) from Km. 0.000 to 223.700 & NH-154 from Rajol at Km. 72.000 to Mandi at Km. 208.000 in the state of Himachal pradesh.",
     "client": "MVD Cementation & Construction",
     "tags": [
@@ -281,6 +301,7 @@
   },
   {
     "id": "nan",
+    "title": "NH-21A concrete road at eight locations",
     "name": "Construction of PQC Road on NH-21A from Km 14+700 to Km 34+000 at 8 Locations in the state of Himachal Pradesh",
     "client": "MVD Cementation & Construction",
     "tags": [

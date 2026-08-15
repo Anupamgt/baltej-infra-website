@@ -41,9 +41,9 @@ function initStatsCounter() {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const counter = entry.target;
-        const target = +counter.getAttribute('data-target');
 
         const updateCount = () => {
+          const target = +counter.getAttribute('data-target');
           const count = +counter.innerText;
           const inc = target / speed;
 
@@ -52,6 +52,7 @@ function initStatsCounter() {
             setTimeout(updateCount, 15);
           } else {
             counter.innerText = target;
+            counter.dataset.counted = 'done';
           }
         };
 
@@ -100,7 +101,7 @@ function initScrollAnimations() {
   document.querySelectorAll('.stagger-container').forEach((el) => staggerObserver.observe(el));
 }
 
-// --- 4. Light 3D tilt on capabilities ---
+// --- 4. Light 3D tilt on service cards ---
 function initTilt() {
   if (window.matchMedia('(pointer: coarse)').matches) return;
 
@@ -173,11 +174,27 @@ async function loadPortfolioData() {
 
     const defaultProjects = allProjects.filter((p) => getProjectNumericValue(p) >= 10000000);
     renderProjects(defaultProjects);
+    applyPortfolioStats(allProjects);
     initFilters();
   } catch (error) {
     console.error('Error loading portfolio data:', error);
-    container.innerHTML = '<p>Error loading projects. Please try again later.</p>';
+    container.innerHTML = '<p>Projects could not be loaded. Reload the page or email info@baltejinfra.com.</p>';
   }
+}
+
+// Keeps the headline figures tied to the project records rather than to hardcoded claims.
+function applyPortfolioStats(projects) {
+  const counts = {
+    projects: projects.length,
+    'in-progress': projects.filter((p) => /progress/i.test(p.status || '')).length,
+  };
+
+  Object.entries(counts).forEach(([key, value]) => {
+    const el = document.querySelector(`.stat-number[data-stat="${key}"]`);
+    if (!el) return;
+    el.setAttribute('data-target', String(value));
+    if (el.dataset.counted === 'done') el.textContent = String(value);
+  });
 }
 
 function shortenProjectTitle(name, max = 88) {
@@ -191,18 +208,26 @@ function shortenProjectTitle(name, max = 88) {
 
 const CAREERS_CROSSLINKS = {
   '95.0': {
-    label: 'Hiring for corridors like this',
+    label: 'Hiring: Site Engineer — Highways',
     href: 'apply.html?role=Site%20Engineer%20%E2%80%94%20Highways',
   },
   '67.0': {
-    label: 'See Site Engineer openings',
+    label: 'Open roles on highway packages',
     href: 'careers.html#openings',
   },
   '100.0': {
-    label: 'Join highway operations',
+    label: 'Hiring: QA / QC Engineer',
     href: 'apply.html?role=QA%20%2F%20QC%20Engineer',
   },
 };
+
+function escapeHtml(value) {
+  return String(value == null ? '' : value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
 
 function renderProjects(projects) {
   const container = document.getElementById('projects-container');
@@ -238,18 +263,18 @@ function renderProjects(projects) {
       ? `<a class="project-careers-link" href="${cross.href}">${cross.label} →</a>`
       : '';
 
-    const safeTitle = String(p.name || '')
-      .replace(/&/g, '&amp;')
-      .replace(/"/g, '&quot;')
-      .replace(/</g, '&lt;');
+    const category = p.tags && p.tags[0] ? p.tags[0] : 'Project';
+    const status = p.status || '';
 
     card.innerHTML = `
       <div class="card-content">
-        <div class="card-tag">${p.tags ? p.tags[0] : 'Project'}${p.period ? ' | ' + p.period : ''}</div>
-        <h3 class="card-title" title="${safeTitle}">${shortTitle}</h3>
+        <div class="card-tag">${escapeHtml(category)}${status ? ` · ${escapeHtml(status)}` : ''}</div>
+        <h3 class="card-title">${escapeHtml(p.title || shortenProjectTitle(p.name))}</h3>
+        <p class="card-scope" title="${escapeHtml(p.name)}">${escapeHtml(shortenProjectTitle(p.name, 150))}</p>
         <div class="card-meta">
-          <p>Client: <span>${p.client}</span></p>
-          <p>Quality: <span class="quality-badge" ${gradeClass}>${p.quality_grade || 'N/A'}</span></p>
+          <p>Client: <span>${escapeHtml(p.client || 'Not recorded')}</span></p>
+          <p>Awarded value: <span>${escapeHtml(p.awarded_value || 'Not recorded')}</span></p>
+          <p>Quality grade: <span class="quality-badge" ${gradeClass}>${escapeHtml(p.quality_grade || 'Not rated')}</span></p>
         </div>
         ${crossHtml}
       </div>
@@ -338,7 +363,7 @@ function initContactForm() {
       'https://script.google.com/macros/s/AKfycbxasFvbeiPO7q1D54C5B_WnltgAw3xVAcORYMP3Y5m3FcOA7-S226jBG05absMsjrzJOQ/exec';
 
     if (!webhookUrl || !webhookUrl.startsWith('https://script.google.com/')) {
-      alert('Invalid Google Web App URL! Please configure a valid Google Web App URL in app.js.');
+      alert('This form is not configured. Email info@baltejinfra.com instead.');
       return;
     }
 
@@ -364,7 +389,7 @@ function initContactForm() {
       });
 
       if (response.ok) {
-        alert('Thank you for reaching out! Your inquiry has been sent successfully.');
+        alert('Enquiry sent. We reply within two working days.');
         form.reset();
       } else {
         throw new Error('Server returned status: ' + response.status);
@@ -372,7 +397,7 @@ function initContactForm() {
     } catch (error) {
       console.error('Submission error:', error);
       alert(
-        'An error occurred while sending your message.\n\nNote: If you are using an ad-blocker or Brave shields, it may be blocking requests. Please temporarily disable it for this site and try again.'
+        'The enquiry did not send.\n\nAn ad-blocker or browser shield can block this request. Disable it for this site and try again, or email info@baltejinfra.com.'
       );
     } finally {
       submitBtn.disabled = false;
