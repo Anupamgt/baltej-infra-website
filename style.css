@@ -329,40 +329,37 @@ img {
   width: min(92%, var(--container-max));
   margin: 0 auto;
   padding: 0 0 clamp(5rem, 12vh, 8rem);
-  max-width: 46rem;
+  max-width: 42rem;
   margin-left: max(4%, calc((100% - var(--container-max)) / 2));
 }
 
 .hero-brand {
   font-family: var(--font-display);
-  font-size: 0.95rem;
-  font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--c-copper-light);
-  margin-bottom: 1rem;
-}
-
-.hero h1 {
-  font-family: var(--font-display);
-  font-size: clamp(2.6rem, 6.4vw, 4.6rem);
+  font-size: clamp(3.5rem, 12vw, 7.5rem);
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
+  line-height: 0.9;
+  letter-spacing: 0.06em;
   color: var(--c-sand);
-  line-height: 1.02;
-  margin-bottom: 1.1rem;
-  max-width: 22ch;
+  margin-bottom: 1.25rem;
   text-shadow: 0 8px 40px rgba(0, 0, 0, 0.45);
 }
 
+.hero h1 {
+  font-family: var(--font-body);
+  font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+  font-weight: 400;
+  color: rgba(232, 226, 214, 0.92);
+  line-height: 1.35;
+  margin-bottom: 0.85rem;
+  max-width: 22ch;
+}
+
 .hero-lead {
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 300;
-  color: rgba(232, 226, 214, 0.72);
+  color: rgba(232, 226, 214, 0.62);
   margin-bottom: 1.75rem;
-  max-width: 46ch;
+  max-width: 36ch;
 }
 
 .hero-actions {
@@ -2008,7 +2005,7 @@ a.contact-row:hover {
   }
 
   .hero-brand {
-    letter-spacing: 0.16em;
+    letter-spacing: 0.04em;
   }
 
   .about-facts,
